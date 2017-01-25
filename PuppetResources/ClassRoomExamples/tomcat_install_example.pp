@@ -11,3 +11,7 @@ service { $tomcat_pname:
     ensure     => running,
     enable     => true,
 }
+
+service { $tomcat:
+   ensure => restart  
+}
