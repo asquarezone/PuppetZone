@@ -1,7 +1,7 @@
-# Class: motd
+# Class: subclass_ex
 # ===========================
 #
-# Full description of class motd here.
+# Full description of class subclass_ex here.
 #
 # Parameters
 # ----------
@@ -28,7 +28,7 @@
 # --------
 #
 # @example
-#    class { 'motd':
+#    class { 'subclass_ex':
 #      servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
 #    }
 #
@@ -42,21 +42,9 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class motd {
+class subclass_ex {
+    include subclass_ex::install
 
-    $my_message = @("BEGIN")
-    This is my message 
-    This is managed by puppet
-    BEGIN
-
-    file { '/etc/motd':
-        ensure => file,
-        #owner  => owner,
-        #group  => group,
-        #mode   => mode,
-        #source => 'puppet:///modules/class/file.txt';
-        content => file('motd/message'),
-    }
-
+    include subclass_ex::myservice
 
 }
