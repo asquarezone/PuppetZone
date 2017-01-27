@@ -48,9 +48,17 @@ class appserver_tomcat {
         'Debian' => 'tomcat7',
     }
 
-    package { $package_name:
-        ensure => installed,
-        
+    class { appserver_tomcat::install :
+        package_name => $package_name ,
+        install_message => "${package_name} is installed "
+
+    }
+
+    #include appserver_tomcat::install
+
+    class { appserver_tomcat::service :
+        package_name => $package_name ,
+
     }
 
    

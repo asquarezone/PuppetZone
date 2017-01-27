@@ -43,6 +43,12 @@
 # Copyright 2017 Your name here, unless otherwise noted.
 #
 class params_demo {
-    include params_demo::display_message
+   # This can be used multiple times but 
+   # cannot set parameters (need to use hiera)
+   # include params_demo::display_message
+
+   class  { params_demo::display_message :
+        message_n => "This is puppet class parameter"
+   }
 
 }

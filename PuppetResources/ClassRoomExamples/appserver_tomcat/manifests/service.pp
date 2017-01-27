@@ -1,12 +1,8 @@
 # Class: service
 #
 #
-class appserver_tomcat::service {
-    # resources
-     $package_name = $facts['os']['family']?{
-        'RedHat' => 'tomcat',
-        'Debian' => 'tomcat7',
-    }
+class appserver_tomcat::service ($package_name) {
+    
 
 # This resource enables the tomcat service
 
