@@ -46,13 +46,13 @@
 class cyclos {
 
     #install java based out of puppet forge puppetlabs/java and documentation @ https://forge.puppet.com/puppetlabs/java
-    java::oracle { 'jdk6':
-        ensure  => 'present',
-        version => '6',  
-    }
+    include cyclos::install_java
 
     #download cyclos
     include cyclos::downloadcyclos
+
+    #install mysql and configure root users default password
+    include cyclos::install_mysql
 
     
    
