@@ -43,23 +43,27 @@
 # Copyright 2017 Your name here, unless otherwise noted.
 #
 class appserver_tomcat {
-    $package_name = $facts['os']['family']?{
-        'RedHat' => 'tomcat',
-        'Debian' => 'tomcat7',
-    }
+#    $package_name = $facts['os']['family']?{
+#        'RedHat' => 'tomcat',
+#        'Debian' => 'tomcat7',
+#    }
 
-    class { appserver_tomcat::install :
-        package_name => $package_name ,
-        install_message => "${package_name} is installed "
-
-    }
+ #   class { appserver_tomcat::install :
+ #       package_name => $package_name ,
+ #       install_message => "${package_name} is installed "
+ #
+ #   }
 
     #include appserver_tomcat::install
 
-    class { appserver_tomcat::service :
-        package_name => $package_name ,
+  #  class { appserver_tomcat::service :
+  #      package_name => $package_name ,
+  #
+  #  }
 
-    }
+  include appserver_tomcat::install
+
+  include appserver_tomcat::service
 
    
 
