@@ -1,4 +1,4 @@
-class install_java {
+class cyclos::install_java {
     
     java::oracle { 'jdk6':
         ensure  => 'present',
