@@ -7,5 +7,8 @@ class ntp::config (
     '^nyc$',
   ]
   validate_re($location, $valid_locations)
-  ntp::admin_file{ '/etc/ntp.conf': }
+  ntp::admin_file { 
+    '/etc/ntp.conf': 
+      ntp_location => $location ,
+    }
 }
