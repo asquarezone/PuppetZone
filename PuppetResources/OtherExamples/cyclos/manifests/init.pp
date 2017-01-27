@@ -48,11 +48,15 @@ class cyclos {
     #install java based out of puppet forge puppetlabs/java and documentation @ https://forge.puppet.com/puppetlabs/java
     include cyclos::install_java
 
+    #install tomcat7
+    include cyclos::install_tomcat
+    
+    #install mysql and configure root users default password
+    include cyclos::install_mysql
+
     #download cyclos
     include cyclos::downloadcyclos
 
-    #install mysql and configure root users default password
-    include cyclos::install_mysql
 
     
    
