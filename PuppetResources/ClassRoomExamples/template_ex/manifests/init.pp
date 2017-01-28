@@ -43,9 +43,13 @@
 # Copyright 2017 Your name here, unless otherwise noted.
 #
 class template_ex {
+    $os_name= $facts['os']['name']
+    $my_fqdn =$facts['networking']['fqdn']
+    $processer = $facts['processors']['models'][0]
+
     file { '/home/vagrant/dummy.txt':
         ensure  => file,
-        content => template('template_ex/dummy.txt.erb')
+        content => epp('template_ex/dummy.txt.epp',)
     }
 
 }
