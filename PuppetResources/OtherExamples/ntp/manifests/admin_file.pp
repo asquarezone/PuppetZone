@@ -1,4 +1,4 @@
-define ntp::admin_file($ntp_location='london') {
+define ntp::admin_file {
   include ntp::params
   $admingroup = $ntp::params::admingroup
   file { $title :
