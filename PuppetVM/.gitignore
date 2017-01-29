@@ -1,0 +1,9 @@
+
+# Created by https://www.gitignore.io/api/vag,vagrant
+
+#!! ERROR: vag is undefined. Use list command to see defined gitignore types !!#
+
+### Vagrant ###
+.vagrant/
+
+# End of https://www.gitignore.io/api/vag,vagrant

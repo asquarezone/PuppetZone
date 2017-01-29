@@ -1,0 +1,15 @@
+{
+  "name": "asquarezone/motd",
+  "version": "0.1.0",
+  "author": "asquarezone",
+  "summary": "this is for class room training",
+  "license": "Apache-2.0",
+  "source": "https://github.com/asquarezone/puppet.git",
+  "project_page": "https://github.com/asquarezone/puppet",
+  "issues_url": "https://github.com/asquarezone/puppet/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+

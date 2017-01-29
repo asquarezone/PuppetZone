@@ -1,0 +1,29 @@
+{
+  "name": "asquarezone/cyclos",
+  "version": "0.1.0",
+  "author": "asquarezone",
+  "summary": "This module will be used to install cylcos",
+  "license": "Apache-2.0",
+  "source": "",
+  "project_page": null,
+  "issues_url": null,
+  "operatingsystem_support": [
+        {
+        "operatingsystem":"RedHat",
+        "operatingsystemrelease":[ "6.0","7.0" ]
+        },
+        {
+        "operatingsystem": "Ubuntu",
+        "operatingsystemrelease": [ "12.04", "14.04" ]
+        }
+       ],
+  "dependencies": [
+    { "name":"puppetlabs-stdlib","version_requirement":">= 1.0.0" },
+    { "name":"puppetlabs/java"},
+    {"name":"puppet/archive"},
+    {"name":"puppetlabs/mysql"},
+    {"name":"puppetlabs/apt"}
+  ],
+  "data_provider": null
+}
+
