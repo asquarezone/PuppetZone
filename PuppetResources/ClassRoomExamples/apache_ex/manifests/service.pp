@@ -8,7 +8,7 @@ class apache_ex::service($service_name='httpd'){
         # pattern    => $service_name,
     }
 
-    $service_message = "Apache Service has been started"
+    $service_message = hiera('apache_ex::service_message')
     notify { $service_message: } 
     
 }

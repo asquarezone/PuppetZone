@@ -3,7 +3,7 @@ class apache_ex::install ($package_name = 'httpd') {
         ensure => installed,
     }
 
-    $apache_install_message="Apache Server is installed"
+    $apache_install_message=hiera('apache_ex::install_message')
 
     notify { $apache_install_message: } 
     
