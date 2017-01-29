@@ -1,7 +1,7 @@
-# Class: motd
+# Class: apache_ex
 # ===========================
 #
-# Full description of class motd here.
+# Full description of class apache_ex here.
 #
 # Parameters
 # ----------
@@ -28,7 +28,7 @@
 # --------
 #
 # @example
-#    class { 'motd':
+#    class { 'apache_ex':
 #      servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
 #    }
 #
@@ -42,18 +42,12 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class motd($message='test') {
+class apache_ex {
 
-    
+    # install configured package
+    include apache_ex::install
 
-    file { '/etc/motd':
-        ensure => file,
-        #owner  => owner,
-        #group  => group,
-        #mode   => mode,
-        #source => 'puppet:///modules/class/file.txt';
-        content => $message,
-    }
-
+    #enable and start the service
+    include apache_ex::service
 
 }
